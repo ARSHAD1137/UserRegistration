@@ -27,4 +27,13 @@ namespace UserRegistration
             return Regex.IsMatch(email, Email_Validator);
         }
     }
+    public class MoblieNo
+    {
+        string MoblieNo_Validator = "^[91]{2}[ ]*[0-9]{10}$";
+        public bool ValidateMobilNo(string mobile)
+        {
+            return Regex.IsMatch(mobile, MoblieNo_Validator);
+        }
+    }
+
 }
