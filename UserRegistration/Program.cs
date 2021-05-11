@@ -11,9 +11,9 @@ namespace UserRegistration
             Console.WriteLine("Welcome To User Registration");
 
             Name pattern = new Name();
-            bool result = pattern.ValidateName(FirstName());
-            Console.WriteLine(result);
-            
+            bool firstname = pattern.ValidateName(FirstName());
+            Console.WriteLine(firstname);
+
         }
        
 
