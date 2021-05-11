@@ -11,17 +11,25 @@ namespace UserRegistration
             Console.WriteLine("Welcome To User Registration");
 
             Name pattern = new Name();
-            bool result = pattern.ValidateName(FirstName());
-            Console.WriteLine(result);
-            
+            bool firstname = pattern.ValidateName(FirstName());
+            Console.WriteLine(firstname);
+            bool lastname = pattern.ValidateName1(LastName());
+            Console.WriteLine(lastname);
+
         }
        
 
         public static string FirstName()
         {
-            Console.WriteLine("Enter a First Name:");
+            Console.WriteLine("First Name:");
             string FirstName = Console.ReadLine();
             return FirstName;
+        }
+        public static string LastName()
+        {
+            Console.WriteLine("Last Name:");
+            string LastName = Console.ReadLine();
+            return LastName;
         }
     }
 }
