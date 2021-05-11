@@ -19,4 +19,12 @@ namespace UserRegistration
         }
       
     }
+    public class Email
+    {
+        string Email_Validator = "^[a-zA-Z0-9]+([.]{1}[a-zA-Z0-9]+)?[@]{1}[a-zA-Z]+[.][A-Za-z]{3}$";
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, Email_Validator);
+        }
+    }
 }
