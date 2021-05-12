@@ -35,6 +35,13 @@ namespace UserRegistration
             return Regex.IsMatch(mobile, MoblieNo_Validator);
         }
     }
-  
+    public class Password
+    {
+        string Password_Validator = "[a-zA-Z0-9]{8}";
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, Password_Validator);
+        }
+    }
 
 }
