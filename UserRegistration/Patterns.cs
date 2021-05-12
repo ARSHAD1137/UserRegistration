@@ -37,7 +37,7 @@ namespace UserRegistration
     }
     public class Password
     {
-        string Password_Validator = "^[A-Z][a-zA-Z0-9]{7}$";
+        string Password_Validator = "^.*(?=.{8})(?=.*[0-1])(?=.*[a-zA-z]).*$";
         public bool ValidatePassword(string password)
         {
             return Regex.IsMatch(password, Password_Validator);
