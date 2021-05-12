@@ -9,7 +9,7 @@ namespace UserRegistration
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome To User Registration");
-            Console.WriteLine("Enter Choice: \n 1: Name Validator\n 2: Email Validator\n 3: Mobile Number Validator\n 4: Password Validator");
+            Console.WriteLine("Enter Choice: \n 1: Name Validator\n 2: Email Validator\n 3: Mobile Number Validator");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -26,15 +26,11 @@ namespace UserRegistration
                     Console.WriteLine(email);
                     break;
                 case 3:
-                    MoblieNo pattern2 = new MoblieNo();
+                    MobileNo pattern2 = new MobileNo();
                     bool mobile = pattern2.ValidateMobilNo(MobileNum());
                     Console.WriteLine(mobile);
                     break;
-                case 4:
-                    Password pattern3 = new Password();
-                    bool password = pattern3.ValidatePassword(UserPassword());
-                    Console.WriteLine(password);
-                    break;
+               
                 
 
             }
@@ -68,11 +64,6 @@ namespace UserRegistration
             string MobileNo = Console.ReadLine();
             return MobileNo;
         }
-        public static string UserPassword()
-        {
-            Console.WriteLine("Password:");
-            string Password = Console.ReadLine();
-            return Password;
-        }
+       
     }
 }

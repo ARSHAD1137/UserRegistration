@@ -27,7 +27,7 @@ namespace UserRegistration
             return Regex.IsMatch(email, Email_Validator);
         }
     }
-    public class MoblieNo
+    public class MobileNo
     {
         string MoblieNo_Validator = "^[91]{2}[ ]*[0-9]{10}$";
         public bool ValidateMobilNo(string mobile)
@@ -35,13 +35,6 @@ namespace UserRegistration
             return Regex.IsMatch(mobile, MoblieNo_Validator);
         }
     }
-    public class Password
-    {
-        string Password_Validator = "^[a-zA-Z0-9]+([.]{1}[a-zA-Z0-9]+)?[@]{1}[a-zA-Z]+[.][A-Za-z]{3}$";
-        public bool ValidatePassword(string password)
-        {
-            return Regex.IsMatch(password, Password_Validator);
-        }
-    }
+  
 
 }
